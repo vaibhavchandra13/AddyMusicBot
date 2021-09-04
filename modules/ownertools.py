@@ -30,9 +30,8 @@ async def botstats(_, message: Message):
     cpu_usage = psutil.cpu_percent()
     ram_usage = psutil.virtual_memory().percent
     disk_usage = psutil.disk_usage('/').percent
-    total_users = await db.total_users_count()
     await message.reply_text(
-        text=f"📊 𝗦𝘁𝗮𝘁𝘀  \n\n**🤖 Vᴇʀꜱɪᴏɴ:** `v8.3` \n\n**🙎🏼 𝗨𝘀𝗲𝗿𝘀:** \n » **Uꜱᴇʀꜱ Iɴ PM:** `{total_users}` \n\n**💾 𝗗𝗶𝘀𝗸 𝗨𝘀𝗮𝗴𝗲,** \n » **Dɪꜱᴋ Sᴘᴀᴄᴇ:** `{total}` \n » **Uꜱᴇᴅ:** `{used}({disk_usage}%)` \n » **Fʀᴇᴇ:** `{free}` \n\n**🎛 𝗛𝗮𝗿𝗱𝘄𝗮𝗿𝗲 𝗨𝘀𝗮𝗴𝗲,** \n » **CPU Uꜱᴀɢᴇ:** `{cpu_usage}%` \n » **RAM Uꜱᴀɢᴇ:** `{ram_usage}%`",
+        text=f"📊 𝗦𝘁𝗮𝘁𝘀  \n\n**🤖 Vᴇʀꜱɪᴏɴ:** `v8.3` \n\n**💾 𝗗𝗶𝘀𝗸 𝗨𝘀𝗮𝗴𝗲,** \n » **Dɪꜱᴋ Sᴘᴀᴄᴇ:** `{total}` \n » **Uꜱᴇᴅ:** `{used}({disk_usage}%)` \n » **Fʀᴇᴇ:** `{free}` \n\n**🎛 𝗛𝗮𝗿𝗱𝘄𝗮𝗿𝗲 𝗨𝘀𝗮𝗴𝗲,** \n » **CPU Uꜱᴀɢᴇ:** `{cpu_usage}%` \n » **RAM Uꜱᴀɢᴇ:** `{ram_usage}%`",
         parse_mode="Markdown",
         quote=True
     )
