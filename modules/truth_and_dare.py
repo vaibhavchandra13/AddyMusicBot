@@ -4,7 +4,7 @@ from telegram import Update
 from telegram.ext import CallbackContext, run_async
 from config import BOT_USERNAME
 import modules.truth_and_dare_string as truth_and_dare_string
-
+from pyrogram import Client
 
 @Client.on_message(command(["truth", f"truth@{BOT_USERNAME}"]))
 def truth(update: Update, context: CallbackContext):
