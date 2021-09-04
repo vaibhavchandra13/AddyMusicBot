@@ -1,5 +1,5 @@
 import os
-
+from helpers.filters import command
 from pyrogram import Client
 from telegraph import upload_file
 
