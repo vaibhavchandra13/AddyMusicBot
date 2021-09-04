@@ -48,199 +48,28 @@ async def cbstart(_, query: CallbackQuery):
     )
 
 
-@Client.on_callback_query(filters.regex("cbhelp"))
-async def cbhelp(_, query: CallbackQuery):
-    await query.edit_message_text(
-        f"""<b>𝐇𝐞𝐲𝐚👋🏻 {message.from_user.mention} 𝐖𝐥𝐜𝐦 𝐓𝐨 𝐇𝐞𝐥𝐩 𝐌𝐞𝐧𝐮!</b>
 
-𝐇𝐞𝐫𝐞 𝐢𝐧 𝐓𝐡𝐢𝐬 𝐌𝐞𝐧𝐮 𝐘𝐨𝐮 𝐖𝐢𝐥𝐥 𝐆𝐞𝐭 𝐒𝐨𝐦𝐞 𝐀𝐯𝐚𝐢𝐥𝐚𝐛𝐥𝐞 𝐂𝐨𝐦𝐦𝐚𝐧𝐝𝐬 𝐌𝐞𝐧𝐮
-𝐀𝐧𝐝 𝐢𝐧 𝐞𝐚𝐜𝐡 𝐌𝐞𝐧𝐮 𝐓𝐡𝐞𝐫𝐞 𝐢𝐬 𝐁𝐫𝐢𝐞𝐟 𝐄𝐱𝐩𝐥𝐚𝐧𝐚𝐭𝐢𝐨𝐧 𝐎𝐟 𝐂𝐨𝐦𝐦𝐚𝐧𝐝𝐬
-""",
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        "🎀 𝗕𝗮𝘀𝗶𝗰 𝗖𝗠𝗗𝘀", callback_data="cbbasic"
-                    ),
-                    InlineKeyboardButton(
-                        "😮 𝗔𝗱𝘃𝗮𝗻𝗰𝗲𝗱 𝗖𝗠𝗗𝘀", callback_data="cbadvanced"
-                    )
-                ],
-                [
-                    InlineKeyboardButton(
-                        "😎 𝗔𝗱𝗺𝗶𝗻 𝗖𝗠𝗗𝘀", callback_data="cbadmin"
-                    ),
-                    InlineKeyboardButton(
-                        "🤩 𝗦𝘂𝗱𝗼 𝗖𝗠𝗗𝘀", callback_data="cbsudo"
-                    )
-                ],
-                [
-                    InlineKeyboardButton(
-                        "😆 𝗢𝘄𝗻𝗲𝗿 𝗖𝗠𝗗𝘀", callback_data="cbowner"
-                    )
-                ],
-                [
-                    InlineKeyboardButton(
-                        "😝 𝗙𝘂𝗻 𝗖𝗠𝗗𝘀", callback_data="cbfun"
-                    )
-                ],
-                [
-                    InlineKeyboardButton(
-                        "🗑𝗖𝗹𝗼𝘀𝗲", callback_data="cbguide"
-                    )
-                ]
-            ]
-        )
-    )
-
-
-@Client.on_callback_query(filters.regex("cbbasic"))
+@Client.on_callback_query(filters.regex("scode"))
 async def cbbasic(_, query: CallbackQuery):
     await query.edit_message_text(
-        f"""<b>𝗛𝗲𝗿𝗲 𝗔𝗿𝗲 𝗕𝗮𝘀𝗶𝗰 𝗖𝗼𝗺𝗺𝗮𝗻𝗱𝘀😋</b>
+        f"""<b>𝐇𝐞𝐫𝐞 𝐢𝐬 𝐓𝐡𝐞 𝐒𝐨𝐮𝐫𝐜𝐞 𝐂𝐨𝐝𝐞 𝐎𝐟 {PROJECT_NAME} 😋</b>
 
-🎧 [ 𝐆𝐫𝐨𝐮𝐩 𝐂𝐌𝐃𝐬 ]
+😅 [ 𝗡𝗼𝘁𝗲 ]
 
-/play (song name) - play song from youtube
-/fplay (reply to audio) - play song using audio file
-/playlist - show the list song in queue
-/song (song name) - download song from youtube
-/search (video name) - search video from youtube detailed
-/video (video name) - download video from youtube detailed
-/lyrics - (song name) lyrics scrapper
-/userbotjoin - invite the assistant for join to your group
+This Bot Is a Open Source Bot So Don't Foget To Give a Star on GitHub🤩
 
 """,
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "🗑𝗖𝗹𝗼𝘀𝗲", callback_data="close"
+                        "𝐂𝐨𝐝𝐞", url="https://github.com/imAddyxD/AddyMusicBot"
                     )
                 ]
             ]
         )
     )
 
-
-@Client.on_callback_query(filters.regex("cbadvanced"))
-async def cbadvanced(_, query: CallbackQuery):
-    await query.edit_message_text(
-        f"""<b>𝗛𝗲𝗿𝗲 𝗔𝗿𝗲 𝗔𝗱𝘃𝗮𝗻𝗰𝗲𝗱 𝗖𝗼𝗺𝗺𝗮𝗻𝗱𝘀</b>
-
-/start (in group) - see the bot alive status
-/reload - reload bot and refresh the admin list
-/admincache - refresh the admin cache
-/ping - check the bot ping status
-/uptime - check the bot uptime status
-""",
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        "🗑𝗖𝗹𝗼𝘀𝗲", callback_data="close"
-                    )
-                ]
-            ]
-        )
-    )
-
-
-@Client.on_callback_query(filters.regex("cbadmin"))
-async def cbadmin(_, query: CallbackQuery):
-    await query.edit_message_text(
-        f"""<b>𝗛𝗲𝗿𝗲 𝗔𝗿𝗲 𝗔𝗱𝗺𝗶𝗻 𝗖𝗼𝗺𝗺𝗮𝗻𝗱𝘀</b>
-
-/player - show the music playing status
-/pause - pause the music streaming
-/resume - resume the music was paused
-/skip - skip to the next song
-/end - stop music streaming
-/userbotjoin - invite assistant join to your group
-/auth - authorized user for using music bot
-/deauth - unauthorized for using music bot
-/player - open the player settings panel
-/musicplayer (on / off) - disable / enable music player in your group
-""",
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        "🗑𝗖𝗹𝗼𝘀𝗲", callback_data="close"
-                    )
-                ]
-            ]
-        )
-    )
-
-
-@Client.on_callback_query(filters.regex("cbsudo"))
-async def cbsudo(_, query: CallbackQuery):
-    await query.edit_message_text(
-        f"""<b>𝗛𝗲𝗿𝗲 𝗔𝗿𝗲 𝗦𝘂𝗱𝗼 𝗖𝗼𝗺𝗺𝗮𝗻𝗱𝘀</b>
-
-/userbotleaveall - order the assistant to leave from all group
-/gcast - send a broadcast message trought the assistant
-/stats - show the bot statistic
-""",
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        "🗑𝗖𝗹𝗼𝘀𝗲", callback_data="close"
-                    )
-                ]
-            ]
-        )
-    )
-
-
-@Client.on_callback_query(filters.regex("cbowner"))
-async def cbowner(_, query: CallbackQuery):
-    await query.edit_message_text(
-        f"""<b>𝗛𝗲𝗿𝗲 𝗔𝗿𝗲 𝗢𝘄𝗻𝗲𝗿 𝗖𝗼𝗺𝗺𝗮𝗻𝗱𝘀</b>
-
-/stats - show the bot statistic
-/broadcast - send a broadcast message from bot
-/block (user id - duration - reason) - block user for using your bot
-/unblock (user id - reason) - unblock user you blocked for using your bot
-/blocklist - show you the list of user was blocked for using your bot
-
-📝 𝐍𝐨𝐭𝐞: 𝘼𝙡𝙡 𝙘𝙤𝙢𝙢𝙖𝙣𝙙𝙨 𝙤𝙬𝙣𝙚𝙙 𝙗𝙮 𝙩𝙝𝙞𝙨 𝙗𝙤𝙩 𝙘𝙖𝙣 𝙗𝙚 𝙚𝙭𝙚𝙘𝙪𝙩𝙚𝙙 𝙗𝙮 𝙩𝙝𝙚 𝙤𝙬𝙣𝙚𝙧 𝙤𝙛 𝙩𝙝𝙚 𝙗𝙤𝙩 𝙬𝙞𝙩𝙝𝙤𝙪𝙩 𝙖𝙣𝙮 𝙚𝙭𝙘𝙚𝙥𝙩𝙞𝙤𝙣𝙨.
-""",
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        "🗑𝗖𝗹𝗼𝘀𝗲", callback_data="close"
-                    )
-                ]
-            ]
-        )
-    )
-
-
-@Client.on_callback_query(filters.regex("cbfun"))
-async def cbfun(_, query: CallbackQuery):
-    await query.edit_message_text(
-        f"""<b>𝗛𝗲𝗿𝗲 𝗔𝗿𝗲 𝗙𝘂𝗻 𝗖𝗼𝗺𝗺𝗮𝗻𝗱𝘀</b>
-
-/chika - check it by yourself
-/wibu - check it by yourself
-/asupan - check it by yourself
-/truth - check it by yourself
-/dare - check it by yourself
-""",
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        "🗑𝗖𝗹𝗼𝘀𝗲", callback_data="close"
-                    )
-                ]
-            ]
-        )
-    )
 
 
 @Client.on_callback_query(filters.regex("cbguide"))
@@ -308,52 +137,6 @@ async def cbback(_, query: CallbackQuery):
     )
 
 
-
-@Client.on_callback_query(filters.regex("cbcmdss"))
-async def cbhelps(_, query: CallbackQuery):
-    await query.edit_message_text(
-        f"""<b>𝐇𝐞𝐲𝐚👋🏻 {message.from_user.mention} 𝐖𝐥𝐜𝐦 𝐓𝐨 𝐇𝐞𝐥𝐩 𝐌𝐞𝐧𝐮!</b>
-
-𝐇𝐞𝐫𝐞 𝐢𝐧 𝐓𝐡𝐢𝐬 𝐌𝐞𝐧𝐮 𝐘𝐨𝐮 𝐖𝐢𝐥𝐥 𝐆𝐞𝐭 𝐒𝐨𝐦𝐞 𝐀𝐯𝐚𝐢𝐥𝐚𝐛𝐥𝐞 𝐂𝐨𝐦𝐦𝐚𝐧𝐝𝐬 𝐌𝐞𝐧𝐮
-𝐀𝐧𝐝 𝐢𝐧 𝐞𝐚𝐜𝐡 𝐌𝐞𝐧𝐮 𝐓𝐡𝐞𝐫𝐞 𝐢𝐬 𝐁𝐫𝐢𝐞𝐟 𝐄𝐱𝐩𝐥𝐚𝐧𝐚𝐭𝐢𝐨𝐧 𝐎𝐟 𝐂𝐨𝐦𝐦𝐚𝐧𝐝𝐬
-
-""",
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        "🎀 𝗕𝗮𝘀𝗶𝗰 𝗖𝗠𝗗𝘀", callback_data="cbbasic"
-                    ),
-                    InlineKeyboardButton(
-                        "😮 𝗔𝗱𝘃𝗮𝗻𝗰𝗲𝗱 𝗖𝗠𝗗𝘀", callback_data="cbadvanced"
-                    )
-                ],
-                [
-                    InlineKeyboardButton(
-                        "😎 𝗔𝗱𝗺𝗶𝗻 𝗖𝗠𝗗𝘀", callback_data="cbadmin"
-                    ),
-                    InlineKeyboardButton(
-                        "🤩 𝗦𝘂𝗱𝗼 𝗖𝗠𝗗𝘀", callback_data="cbsudo"
-                    )
-                ],
-                [
-                    InlineKeyboardButton(
-                        "😆 𝗢𝘄𝗻𝗲𝗿 𝗖𝗠𝗗𝘀", callback_data="cbowner"
-                    )
-                ],
-                [
-                    InlineKeyboardButton(
-                        "😝 𝗙𝘂𝗻 𝗖𝗠𝗗𝘀", callback_data="cbfun"
-                    )
-                ],
-                [
-                    InlineKeyboardButton(
-                        "🗑𝗖𝗹𝗼𝘀𝗲", callback_data="close"
-                    )
-                ]
-            ]
-        )
-    )
 
 
 @Client.on_callback_query(filters.regex("cbhowtouse"))
