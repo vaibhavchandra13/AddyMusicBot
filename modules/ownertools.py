@@ -14,8 +14,6 @@ from functools import wraps
 from os import environ, execle, path, remove
 
 from services.callsmusic.callsmusic import client as pakaya
-from helpers.database import db
-from helpers.dbtools import main_broadcast_handler
 from helpers.decorators import sudo_users_only
 from modules.song import humanbytes, get_text
 from config import SUDO_USERS, SUPPORT_GROUP
