@@ -175,9 +175,9 @@ def r_ply(type_):
                 InlineKeyboardButton("⏭", "skip"),
             ],
             [
-                InlineKeyboardButton("Playlist 📖", "playlist"),
+                InlineKeyboardButton("𝗣𝗹𝗮𝘆𝗹𝗶𝘀𝘁 📖", "playlist"),
             ],
-            [InlineKeyboardButton("❌ Close", "cls")],
+            [InlineKeyboardButton("❌Cʟᴏꜱᴇ", "cls")],
         ]
     )
     return mar
@@ -392,9 +392,9 @@ async def m_cb(b, cb):
                     InlineKeyboardButton("⏭", "skip"),
                 ],
                 [
-                    InlineKeyboardButton("Playlist 📖", "playlist"),
+                    InlineKeyboardButton("𝗣𝗹𝗮𝘆𝗹𝗶𝘀𝘁 📖", "playlist"),
                 ],
-                [InlineKeyboardButton("❌ Close", "cls")],
+                [InlineKeyboardButton("❌Cʟᴏꜱᴇ", "cls")],
             ]
         )
         await cb.message.edit(stats, reply_markup=marr)
@@ -471,7 +471,7 @@ async def play(_, message: Message):
                 try:
                     await USER.join_chat(invitelink)
                     await USER.send_message(
-                        message.chat.id, "𝐈 𝐣𝐨𝐢𝐧𝐞𝐝 𝐭𝐡𝐢𝐬 𝐠𝐫𝐨𝐮𝐩 𝐟𝐨𝐫 𝐩𝐥𝐚𝐲𝐢𝐧𝐠 𝐦𝐮𝐬𝐢𝐜 𝐢𝐧 𝐕𝐂"
+                        message.chat.id, "𝐈 𝐣𝐨𝐢𝐧𝐞𝐝 𝐭𝐡𝐢𝐬 𝐠𝐫𝐨𝐮𝐩 𝐟𝐨𝐫 𝐩𝐥𝐚𝐲𝐢𝐧𝐠 𝐦𝐮𝐬𝐢𝐜♩ 𝐢𝐧 𝐕𝐂"
                     )
                     await lel.edit(
                         "<b>𝐇𝐞𝐥𝐩𝐞𝐫 𝐮𝐬𝐞𝐫𝐛𝐨𝐭 𝐣𝐨𝐢𝐧𝐞𝐝 𝐲𝐨𝐮𝐫 𝐜𝐡𝐚𝐭</b>",
@@ -525,10 +525,10 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("📖 Playlist", callback_data="playlist"),
-                    InlineKeyboardButton("Menu ⏯ ", callback_data="menu"),
+                    InlineKeyboardButton("📖 𝗣𝗹𝗮𝘆𝗹𝗶𝘀𝘁", callback_data="playlist"),
+                    InlineKeyboardButton("𝗠𝗲𝗻𝘂 ⏯  ", callback_data="menu"),
                 ],
-                [InlineKeyboardButton(text="❌ Close", callback_data="cls")],
+                [InlineKeyboardButton(text="❌Cʟᴏꜱᴇ", callback_data="cls")],
             ]
         )
         file_name = get_file_name(audio)
@@ -572,10 +572,10 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                  InlineKeyboardButton(text="🎬 YouTube", url=f"{url}"),
-                  InlineKeyboardButton(text="Download 📥", url=f"{dlurl}"),
+                  InlineKeyboardButton(text="🎬 𝗬𝗧", url=f"{url}"),
+                  InlineKeyboardButton(text="𝗦𝗮𝘃𝗲 📥", url=f"{dlurl}"),
                 ],
-                 [InlineKeyboardButton(text="❌ Close", callback_data="cls")],
+                 [InlineKeyboardButton(text="❌Cʟᴏꜱᴇ", callback_data="cls")],
                  [InlineKeyboardButton(text="Other Bots", url=f"https://t.me/AddyList")],
             ]
         )
@@ -604,7 +604,7 @@ async def play(_, message: Message):
             while j < 5:
                 toxxt += f"{emojilist[j]} [{results[j]['title']}](https://youtube.com{results[j]['url_suffix']})\n"
                 toxxt += f" ├ 🙃 𝗗𝘂𝗿𝗮𝘁𝗶𝗼𝗻 - {results[j]['duration']}\n"
-                toxxt += f" └ 🎵 𝗔𝗱𝗱𝘆 𝗢𝗩𝗘𝗥 𝗣𝗢𝗪𝗘𝗥𝗘𝗗💜"
+                toxxt += f" └ 🎵 𝗔𝗱𝗱𝘆 𝗢𝗩𝗘𝗥 𝗣𝗢𝗪𝗘𝗥𝗘𝗗💜\n\n"
                 j += 1            
             koyboard = InlineKeyboardMarkup(
                 [
@@ -696,7 +696,7 @@ async def play(_, message: Message):
         await message.reply_photo(
             photo="final.png",
             reply_markup=keyboard,
-            caption="▶️ **Playing** 𝐡𝐞𝐫𝐞 𝐭𝐡𝐞 𝐬𝐨𝐧𝐠 𝐫𝐞𝐪𝐮𝐞𝐬𝐭𝐞𝐝 𝐛𝐲 {} 𝐯𝐢𝐚 𝐘𝐨𝐮𝐭𝐮𝐛𝐞 𝐌𝐮𝐬𝐢𝐜 😜".format(
+            caption="𝗡ᴏᴡ 𝗣ʟᴀʏɪɴɢ 𝗙ᴏʀ {} ".format(
                 message.from_user.mention()
             ),
         )
@@ -741,7 +741,7 @@ async def ytplay(_, message: Message):
                 try:
                     await USER.join_chat(invitelink)
                     await USER.send_message(
-                        message.chat.id, "𝐈 𝐣𝐨𝐢𝐧𝐞𝐝 𝐭𝐡𝐢𝐬 𝐠𝐫𝐨𝐮𝐩 𝐟𝐨𝐫 𝐩𝐥𝐚𝐲𝐢𝐧𝐠 𝐦𝐮𝐬𝐢𝐜 𝐢𝐧 𝐕𝐂"
+                        message.chat.id, "𝐈 𝐣𝐨𝐢𝐧𝐞𝐝 𝐭𝐡𝐢𝐬 𝐠𝐫𝐨𝐮𝐩 𝐟𝐨𝐫 𝐩𝐥𝐚𝐲𝐢𝐧𝐠 𝐦𝐮𝐬𝐢𝐜♩ 𝐢𝐧 𝐕𝐂"
                     )
                     await lel.edit(
                         "<b>𝐇𝐞𝐥𝐩𝐞𝐫 𝐮𝐬𝐞𝐫𝐛𝐨𝐭 𝐣𝐨𝐢𝐧𝐞𝐝 𝐲𝐨𝐮𝐫 𝐜𝐡𝐚𝐭</b>",
@@ -798,11 +798,10 @@ async def ytplay(_, message: Message):
     keyboard = InlineKeyboardMarkup(
             [
                 [
-                  InlineKeyboardButton(text="🎬 YouTube", url=f"{url}"),
-                  InlineKeyboardButton(text="Download 📥", url=f"{dlurl}"),
+                  InlineKeyboardButton(text="🎬 𝗬𝗧", url=f"{url}"),
+                  InlineKeyboardButton(text="𝗦𝗮𝘃𝗲 📥", url=f"{dlurl}"),
                 ],
-                 [InlineKeyboardButton(text="Owner😎", url=f"https://t.me/AddyxD")],
-                 [InlineKeyboardButton(text="❌ Close", callback_data="cls")],
+                 [InlineKeyboardButton(text="❌Cʟᴏꜱᴇ", callback_data="cls")],
             ]
     )
     requested_by = message.from_user.first_name
@@ -841,7 +840,7 @@ async def ytplay(_, message: Message):
         await message.reply_photo(
             photo="final.png",
             reply_markup=keyboard,
-            caption="▶️ **Playing** 𝐡𝐞𝐫𝐞 𝐭𝐡𝐞 𝐬𝐨𝐧𝐠 𝐫𝐞𝐪𝐮𝐞𝐬𝐭𝐞𝐝 𝐛𝐲 {} 𝐯𝐢𝐚 𝐘𝐨𝐮𝐭𝐮𝐛𝐞 𝐌𝐮𝐬𝐢𝐜 😜".format(
+            caption="𝗡ᴏᴡ 𝗣ʟᴀʏɪɴɢ 𝗙ᴏʀ {} ".format(
                 message.from_user.mention()
             ),
         )
@@ -884,7 +883,7 @@ async def deezer(client: Client, message_: Message):
                 try:
                     await USER.join_chat(invitelink)
                     await USER.send_message(
-                        message_.chat.id, "𝐈 𝐣𝐨𝐢𝐧𝐞𝐝 𝐭𝐡𝐢𝐬 𝐠𝐫𝐨𝐮𝐩 𝐟𝐨𝐫 𝐩𝐥𝐚𝐲𝐢𝐧𝐠 𝐦𝐮𝐬𝐢𝐜 𝐢𝐧 𝐕𝐂"
+                        message_.chat.id, "𝐈 𝐣𝐨𝐢𝐧𝐞𝐝 𝐭𝐡𝐢𝐬 𝐠𝐫𝐨𝐮𝐩 𝐟𝐨𝐫 𝐩𝐥𝐚𝐲𝐢𝐧𝐠 𝐦𝐮𝐬𝐢𝐜♩ 𝐢𝐧 𝐕𝐂"
                     )
                     await lel.edit(
                         "<b>𝐇𝐞𝐥𝐩𝐞𝐫 𝐮𝐬𝐞𝐫𝐛𝐨𝐭 𝐣𝐨𝐢𝐧𝐞𝐝 𝐲𝐨𝐮𝐫 𝐜𝐡𝐚𝐭</b>",
@@ -912,7 +911,7 @@ async def deezer(client: Client, message_: Message):
     queryy = text[1]
     query = queryy
     res = lel
-    await res.edit(f"Searching 👀👀👀 for `{queryy}` on deezer")
+    await res.edit(f"GETTIᑎG `{queryy}` ")
     try:
         songs = await arq.deezer(query,1)
         if not songs.ok:
@@ -963,7 +962,7 @@ async def deezer(client: Client, message_: Message):
         qeue.append(appendable)
         await res.edit_text(f"{bn}= #️⃣ 𝐐𝐮𝐞𝐮𝐞𝐝 𝐚𝐭 𝐩𝐨𝐬𝐢𝐭𝐢𝐨𝐧{position}")
     else:
-        await res.edit_text(f"{bn}=▶️ Playing.....")
+        await res.edit_text(f"Pʟᴀʏɪɴɢ...")
 
         que[chat_id] = []
         qeue = que.get(chat_id)
@@ -1025,7 +1024,7 @@ async def jiosaavn(client: Client, message_: Message):
                 try:
                     await USER.join_chat(invitelink)
                     await USER.send_message(
-                        message_.chat.id, "𝐈 𝐣𝐨𝐢𝐧𝐞𝐝 𝐭𝐡𝐢𝐬 𝐠𝐫𝐨𝐮𝐩 𝐟𝐨𝐫 𝐩𝐥𝐚𝐲𝐢𝐧𝐠 𝐦𝐮𝐬𝐢𝐜 𝐢𝐧 𝐕𝐂"
+                        message_.chat.id, "𝐈 𝐣𝐨𝐢𝐧𝐞𝐝 𝐭𝐡𝐢𝐬 𝐠𝐫𝐨𝐮𝐩 𝐟𝐨𝐫 𝐩𝐥𝐚𝐲𝐢𝐧𝐠 𝐦𝐮𝐬𝐢𝐜♩ 𝐢𝐧 𝐕𝐂"
                     )
                     await lel.edit(
                         "<b>𝐇𝐞𝐥𝐩𝐞𝐫 𝐮𝐬𝐞𝐫𝐛𝐨𝐭 𝐣𝐨𝐢𝐧𝐞𝐝 𝐲𝐨𝐮𝐫 𝐜𝐡𝐚𝐭</b>",
@@ -1052,7 +1051,7 @@ async def jiosaavn(client: Client, message_: Message):
     text = message_.text.split(" ", 1)
     query = text[1]
     res = lel
-    await res.edit(f"Searching 👀👀👀 for `{query}` on jio saavn")
+    await res.edit(f"GETTIᑎG `{query}` ")
     try:
         songs = await arq.saavn(query)
         if not songs.ok:
@@ -1106,7 +1105,7 @@ async def jiosaavn(client: Client, message_: Message):
         )
 
     else:
-        await res.edit_text(f"{bn}=Playing.....")
+        await res.edit_text(f"Pʟᴀʏɪɴɢ...")
         que[chat_id] = []
         qeue = que.get(chat_id)
         s_name = sname
