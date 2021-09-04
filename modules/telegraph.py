@@ -2,7 +2,7 @@ import os
 from helpers.filters import command
 from pyrogram import Client
 from telegraph import upload_file
-
+from config import BOT_USERNAME
 
 @Client.on_message(command(["telegraph", f"telegraph@{BOT_USERNAME}"]))
 async def telegraph(client, message):
