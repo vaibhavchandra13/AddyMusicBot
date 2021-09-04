@@ -20,3 +20,7 @@ regex
 dnspython
 bs4
 motor
+tswift
+python-telegram-bot==12.8
+telegraph
+telegram
