@@ -53,7 +53,7 @@ async def start_(client: Client, message: Message):
                         "𝐇𝐨𝐰 𝐓𝐨 𝐔𝐬𝐞?💎", callback_data="cbhowtouse")
                 ],[
                     InlineKeyboardButton(
-                         "🤔𝐂𝐨𝐦𝐦𝐚𝐧𝐝𝐬", callback_data="cbcmdss"
+                         "🤔𝐂𝐨𝐦𝐦𝐚𝐧𝐝𝐬", callback_data="https://t.me/AddyUpdates/5"
                     )
                 ],[
                     InlineKeyboardButton(
@@ -63,7 +63,7 @@ async def start_(client: Client, message: Message):
                         "🔊 𝐔𝐩𝐝𝐚𝐭𝐞𝐬", url=f"https://t.me/AddyUpdates")
                 ],[
                     InlineKeyboardButton(
-                        "𝐒𝐨𝐮𝐫𝐜𝐞 𝐂𝐨𝐝𝐞💞", url="https://t.me/AddyxD"
+                        "𝐒𝐨𝐮𝐫𝐜𝐞 𝐂𝐨𝐝𝐞💞", callback_data="scode"
                     )
                 ]
             ]
