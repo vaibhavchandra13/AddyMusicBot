@@ -603,8 +603,8 @@ async def play(_, message: Message):
 
             while j < 5:
                 toxxt += f"{emojilist[j]} [{results[j]['title']}](https://youtube.com{results[j]['url_suffix']})\n"
-                toxxt += f" ├ 🙃 𝗗𝘂𝗿𝗮𝘁𝗶𝗼𝗻 - {results[j]['duration']}\n"
-                toxxt += f" └ 🎵 𝗔𝗱𝗱𝘆 𝗢𝗩𝗘𝗥 𝗣𝗢𝗪𝗘𝗥𝗘𝗗💜\n\n"
+                toxxt += f" ├ 🙃 ᴅᴜʀᴀᴛɪᴏɴ - {results[j]['duration']}\n"
+                toxxt += f" └ 𝗔ᴅᴅʏ 𝗣ᴏᴡᴇʀᴇᴅ💜\n\n"
                 j += 1            
             koyboard = InlineKeyboardMarkup(
                 [
