@@ -1,4 +1,4 @@
-###Carnival Music Bot
+####Carnival Music Bot
 
 A simple bot that can play music on telegram group's voice call. From Youtube, Jio Saavn and Deezer.
 
@@ -25,10 +25,11 @@ Most Easiest way to deploy this bot
    - `SUDO_USERS` :  Fill Userid of yhe users whom you want to be able to control the bot. You can add multiple id by giving a space in b/w each id.
 
 
-Get STRING_NAME at [@StringSessionGeneratorRobot}(https://t.me/StringSessionGeneratorRobot) Or [On Replit](https://replit.com/@ErichDaniken/Generate-Telegram-String-Session)
+Get STRING_NAME at [@StringSessionGeneratorRobot}(https://t.me/StringSessionGeneratorRobot] Or [On Replit](https://replit.com/@ErichDaniken/Generate-Telegram-String-Session)
 
 
 ##Help 
+
 Need Help in Anything 
 Join 
 - Support Channel :- [Addy Updates](http://t.me/AddyUpdates)
